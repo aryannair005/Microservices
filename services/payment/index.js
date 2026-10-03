@@ -7,7 +7,7 @@ const app = express();
 const PORT = process.env.PORT;
 
 
-app.get("/payment",(req,res)=>{
+app.get("/",(req,res)=>{
     res.status(200).send("Payment route");
 })
 

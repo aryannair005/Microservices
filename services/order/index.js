@@ -9,7 +9,7 @@ const PORT = process.env.PORT;
 
 
 
-app.get("/order",(req,res)=>{
+app.get("/",(req,res)=>{
     res.status(200).send("Order route");
 })
 

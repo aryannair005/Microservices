@@ -8,7 +8,7 @@ const app = express();
 const PORT = process.env.PORT;
 
 
-app.get("/auth",(req,res)=>{
+app.get("/",(req,res)=>{
     res.status(200).send("Auth route");
 })
 
