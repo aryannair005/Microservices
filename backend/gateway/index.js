@@ -10,12 +10,12 @@ const PORT = process.env.PORT;
 
 
 app.get("/",(req,res)=>{
-    res.status(200).send("home route");
+    res.status(200).send(`hello from ${process.env.SERVER_NAME}`);
 })
 
-app.use("/auth",proxy("http://localhost:5001"))
-app.use("/order",proxy("http://localhost:5002"))
-app.use("/payment",proxy("http://localhost:5003"))
+app.use("/auth",proxy("http://auth-service:5001"))
+app.use("/order",proxy("http://order-service:5002"))
+app.use("/payment",proxy("http://payment-service:5003"))
 
 app.listen(PORT,()=>{
     console.log(`Server is listening to port ${PORT} .`)
